@@ -64,12 +64,12 @@ def data_view(file_path):
     datas = pd.read_csv('/home/wangf/PycharmProjects/tianmaoScrape/lagouwang_datas.csv', encoding='utf-8')
 
     #学历要求
-    #datas['education'].value_counts().plot(kind='bar', rot=0)
-    #plt.show()
+    datas['education'].value_counts().plot(kind='bar', rot=0)
+    plt.show()
 
     #工作年限
-    #datas['workYear'].value_counts().plot(kind='barh', rot=0)
-    #plt.show()
+    datas['workYear'].value_counts().plot(kind='barh', rot=0)
+    plt.show()
 
     #工作地点
     datas['city'].value_counts().plot(kind='pie', autopct='%1.2f%%', explode=np.linspace(0.0, 0.6, 21))
